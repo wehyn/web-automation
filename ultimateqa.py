@@ -6,6 +6,8 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.maximize_window()
 driver.implicitly_wait(5)
 driver.get('https://ultimateqa.com/complicated-page')
+
+
 def buttons():
     driver.find_element(By.XPATH, '//*[@id="post-579"]/div/div[1]/div/div/div[3]/div[1]/div[1]/a').click()
     driver.find_element(By.XPATH, '//*[@id="post-579"]/div/div[1]/div/div/div[3]/div[1]/div[2]/a').click()
@@ -34,7 +36,6 @@ def social_media():
     driver.back()
 
 
-
-
-buttons()
-social_media()
+if __name__ == "__main__":
+    buttons()
+    social_media()
