@@ -33,7 +33,7 @@ class ShoppingCartPage:
         self.driver.find_element(By.XPATH, '//*[@id="continue"]').click()
         self.driver.find_element(By.XPATH, '//*[@id="finish"]').click()
 
-        print("Shopping is done! :D")
+        print("Shopping is done.")
 
 
 @pytest.fixture
