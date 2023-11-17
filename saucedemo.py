@@ -45,7 +45,7 @@ def setup():
     return driver
 
 
-def test_shopping_form(setup):
+def test_shopping_flow(setup):
     driver = setup
     login_page = LoginPage(driver)
     login_page.login("standard_user", "secret_sauce")
