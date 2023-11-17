@@ -1,10 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+import pytest
 
 
 def main():
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    option = webdriver.ChromeOptions()
+    option.add_argument("--disable-gpu")
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=option)
     driver.implicitly_wait(10)
     driver.get("https://www.saucedemo.com/")
 
@@ -25,7 +28,7 @@ def main():
     driver.find_element(By.XPATH, '//*[@id="continue"]').click()
     driver.find_element(By.XPATH, '//*[@id="finish"]').click()
 
-    print("Order done")
+    print("Shopping is done.")
 
 
 

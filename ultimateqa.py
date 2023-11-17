@@ -2,7 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+option = webdriver.ChromeOptions()
+driver = webdriver.Chrome(ChromeDriverManager().install(), options=option)
 driver.maximize_window()
 driver.implicitly_wait(5)
 driver.get('https://ultimateqa.com/complicated-page')
@@ -54,6 +55,4 @@ def random_stuff():
 
 
 if __name__ == "__main__":
-    buttons()
     social_media()
-    random_stuff()
